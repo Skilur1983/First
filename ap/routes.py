@@ -1,15 +1,15 @@
-from flask import render_template
-from app import app
-from app.forms import LoginForm
+from ap import app
 from flask import render_template, flash, redirect, url_for, request
-from flask_login import current_user, login_user, logout_user
-from app.models import User
+from ap.forms import LoginForm
+from flask_login import current_user, login_user, logout_user, login_required
+from ap.models import User
 from werkzeug.urls import url_parse
 
 @app.route('/')
 @app.route('/index')
+@login_required
 def index():
-   posts = [
+    posts = [
         {
             'author': {'username': 'John'},
             'body': 'Beautiful day in Portland!'
