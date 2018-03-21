@@ -1,5 +1,4 @@
-import os
-import unittest
+import os, unittest
 
 from datetime import datetime, timedelta
 from ap import app, db
@@ -7,7 +6,7 @@ from ap.models import User, Post
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://app.db'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
         db.create_all()
 
     def tearDown(self):
