@@ -82,3 +82,5 @@ jinja2.exceptions.UndefinedError: 'form' is undefined
 2018-03-26 14:35:04,640 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
 2018-03-26 14:37:36,879 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
 2018-03-26 14:50:31,323 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
+2018-03-26 16:04:28,299 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
+2018-03-26 16:09:55,322 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
