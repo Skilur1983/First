@@ -1,4 +1,4 @@
-2018-03-23 16:03:58,220 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+2018-03-23 16:03:21,356 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -37,7 +37,7 @@ Traceback (most recent call last):
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-03-23 16:04:01,152 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+2018-03-23 16:03:24,353 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -76,9 +76,42 @@ Traceback (most recent call last):
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-03-26 14:07:13,200 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
-2018-03-26 14:07:58,285 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
-2018-03-26 14:30:43,186 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
-2018-03-26 14:35:04,640 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
-2018-03-26 14:37:36,879 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
-2018-03-26 14:50:31,323 INFO: Microblog startup [in /home/dmitry/code/python/Flask/first/ap/__init__.py:42]
+2018-03-23 16:03:36,795 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dmitry/code/python/Flask/first/ap/routes.py", line 33, in index
+    return render_template("index.html", title = 'Fuck off', posts = posts)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/dmitry/code/python/Flask/first/ap/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
