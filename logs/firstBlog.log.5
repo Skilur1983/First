@@ -1,4 +1,4 @@
-2018-03-23 16:03:40,256 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+2018-03-26 17:05:59,645 ERROR: Exception on /explore [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/dmitry/code/python/Flask/first/ap/routes.py", line 33, in index
-    return render_template("index.html", title = 'Fuck off', posts = posts)
+  File "/home/dmitry/code/python/Flask/first/ap/routes.py", line 130, in explore
+    return render_template('index.html', title='Explore', posts=posts)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
     context, ctx.app)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
@@ -30,14 +30,16 @@ Traceback (most recent call last):
     raise value.with_traceback(tb)
   File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/home/dmitry/code/python/Flask/first/ap/templates/base.html", line 30, in top-level template code
+  File "/home/dmitry/code/python/Flask/first/ap/templates/base.html", line 31, in top-level template code
     {% block content %}{% endblock %}
-  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
+  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 22, in block "content"
+    {% include '_post.html' %}
+  File "/home/dmitry/code/python/Flask/first/ap/templates/_post.html", line 3, in top-level template code
+    <td><img src="{{ post.authot.avatar(36) }}"></td>
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-03-23 16:03:43,278 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+jinja2.exceptions.UndefinedError: 'ap.models.Post object' has no attribute 'authot'
+2018-03-26 17:06:01,540 ERROR: Exception on /explore [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -53,8 +55,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/dmitry/code/python/Flask/first/ap/routes.py", line 33, in index
-    return render_template("index.html", title = 'Fuck off', posts = posts)
+  File "/home/dmitry/code/python/Flask/first/ap/routes.py", line 130, in explore
+    return render_template('index.html', title='Explore', posts=posts)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
     context, ctx.app)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
@@ -69,14 +71,16 @@ Traceback (most recent call last):
     raise value.with_traceback(tb)
   File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/home/dmitry/code/python/Flask/first/ap/templates/base.html", line 30, in top-level template code
+  File "/home/dmitry/code/python/Flask/first/ap/templates/base.html", line 31, in top-level template code
     {% block content %}{% endblock %}
-  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
+  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 22, in block "content"
+    {% include '_post.html' %}
+  File "/home/dmitry/code/python/Flask/first/ap/templates/_post.html", line 3, in top-level template code
+    <td><img src="{{ post.authot.avatar(36) }}"></td>
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-03-23 16:03:46,314 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+jinja2.exceptions.UndefinedError: 'ap.models.Post object' has no attribute 'authot'
+2018-03-26 17:06:03,516 ERROR: Exception on /explore [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -92,8 +96,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/dmitry/code/python/Flask/first/ap/routes.py", line 33, in index
-    return render_template("index.html", title = 'Fuck off', posts = posts)
+  File "/home/dmitry/code/python/Flask/first/ap/routes.py", line 130, in explore
+    return render_template('index.html', title='Explore', posts=posts)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
     context, ctx.app)
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
@@ -108,10 +112,12 @@ Traceback (most recent call last):
     raise value.with_traceback(tb)
   File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/home/dmitry/code/python/Flask/first/ap/templates/base.html", line 30, in top-level template code
+  File "/home/dmitry/code/python/Flask/first/ap/templates/base.html", line 31, in top-level template code
     {% block content %}{% endblock %}
-  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
+  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 22, in block "content"
+    {% include '_post.html' %}
+  File "/home/dmitry/code/python/Flask/first/ap/templates/_post.html", line 3, in top-level template code
+    <td><img src="{{ post.authot.avatar(36) }}"></td>
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
+jinja2.exceptions.UndefinedError: 'ap.models.Post object' has no attribute 'authot'

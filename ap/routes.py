@@ -66,16 +66,7 @@ def register():
 @login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
-    posts = [
-        {
-            'author': user,
-            'body': 'Post me again'
-        },
-        {
-            'author': user,
-            'body': 'Post me, my friend'
-        }
-    ]
+    posts = current_user.followed_posts().all()
     return render_template('user.html', user = user, posts = posts)
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
