@@ -1,4 +1,4 @@
-2018-03-28 17:02:54,150 ERROR: Exception on /index [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+2018-03-30 13:30:34,480 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6OCwiZXhwIjoxNTIyNDA2Mzg1Ljk3ODA4MTV9.2eMoIT3stwq2cGKi0Rf7D06O0qatvIdj9biev5Kc9xY [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,48 +12,94 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/dmitry/code/python/Flask/first/ap/routes.py", line 32, in index
-    return render_template("index.html", title = 'Fuck off', form=form, posts = posts.items, next_url=next_url, prev_url=prev_url)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/templating.py", line 133, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 125, in load
-    code = environment.compile(source, name, filename)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 591, in compile
-    self.handle_exception(exc_info, source_hint=source_hint)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+TypeError: reset_password() got an unexpected keyword argument 'token'
+2018-03-30 13:30:36,278 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6OCwiZXhwIjoxNTIyNDA2Mzg1Ljk3ODA4MTV9.2eMoIT3stwq2cGKi0Rf7D06O0qatvIdj9biev5Kc9xY [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/home/dmitry/code/python/Flask/first/ap/templates/index.html", line 28, in template
-    {% endif %}
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 268, in parse_block
-    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 144, in parse_statement
-    self.fail_unknown_tag(token.value, token.lineno)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 97, in fail_unknown_tag
-    return self._fail_ut_eof(name, self._end_token_stack, lineno)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 90, in _fail_ut_eof
-    self.fail(' '.join(message), lineno)
-  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/jinja2/parser.py", line 59, in fail
-    raise exc(msg, lineno, self.name, self.filename)
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endif'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: reset_password() got an unexpected keyword argument 'token'
+2018-03-30 13:30:38,094 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6OCwiZXhwIjoxNTIyNDA2Mzg1Ljk3ODA4MTV9.2eMoIT3stwq2cGKi0Rf7D06O0qatvIdj9biev5Kc9xY [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: reset_password() got an unexpected keyword argument 'token'
+2018-03-30 13:30:39,870 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6OCwiZXhwIjoxNTIyNDA2Mzg1Ljk3ODA4MTV9.2eMoIT3stwq2cGKi0Rf7D06O0qatvIdj9biev5Kc9xY [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: reset_password() got an unexpected keyword argument 'token'
+2018-03-30 13:30:41,968 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6OCwiZXhwIjoxNTIyNDA2Mzg1Ljk3ODA4MTV9.2eMoIT3stwq2cGKi0Rf7D06O0qatvIdj9biev5Kc9xY [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: reset_password() got an unexpected keyword argument 'token'
+2018-03-30 13:30:43,759 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6OCwiZXhwIjoxNTIyNDA2Mzg1Ljk3ODA4MTV9.2eMoIT3stwq2cGKi0Rf7D06O0qatvIdj9biev5Kc9xY [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: reset_password() got an unexpected keyword argument 'token'
+2018-03-30 13:30:45,577 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6OCwiZXhwIjoxNTIyNDA2Mzg1Ljk3ODA4MTV9.2eMoIT3stwq2cGKi0Rf7D06O0qatvIdj9biev5Kc9xY [GET] [in /home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dmitry/code/python/Flask/first/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: reset_password() got an unexpected keyword argument 'token'

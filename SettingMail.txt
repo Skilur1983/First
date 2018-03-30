@@ -1,0 +1,5 @@
+(venv) $ export MAIL_SERVER=smtp.googlemail.com
+(venv) $ export MAIL_PORT=587
+(venv) $ export MAIL_USE_TLS=1
+(venv) $ export MAIL_USERNAME=kanebloodhoof@gmail.com
+(venv) $ export MAIL_PASSWORD=termentor
